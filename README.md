@@ -6,7 +6,7 @@ Create a strong password that provides greater security by randomly generating a
 
 ## Installation
 
-Tools used to create page
+    Tools used to create page
         Visual Studio Code
         GitHub
         Git Bash
