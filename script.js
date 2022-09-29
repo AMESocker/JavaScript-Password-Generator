@@ -1,22 +1,31 @@
-//A.----Done----use a button in html to start javascript code
+//----Notes----
+
+//----Done----use a button in html to start javascript code
 
 //prompt will ask user to choose length of password from 8 to 128
+/*confirm will ask user -- confirm('message')
+  wants lower case letters
+  wants upper case letters
+  wants numbers
+  wants special characters
+*/
+//if cancel on all confirm alert Sorry try again 
 
-//promt will ask if user want lower case letters
+//after all options are selected the output will be printed on page or in alert
 
-//prompt will ask use what series of characters to use to generate password 
+//-----------------Code---------------------------------------
+var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H','J','K','L','Z','X','C','V','B','N','M']
+var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m']
+var numberic = [0,1,2,3,4,5,6,7,8,9];
+var special = [' ','!','\"','#','$','%','&','(',')','*','+','-','.','/',':',';','<','=','>','?','@','[',']','^','_','`','{','|','}','~']
 
-
-
-//another series of prompts will ask about lowercase, uppercase, numeric, and/or special charcters
-//after all options are selected the output will be printed on page
-var numbericArray = [0,1,2,3,4,5,6,7,8,9];
-
-console.log(numbericArray)
+console.log(upperCase)
+console.log(lowerCase)
+console.log(numberic)
+console.log(special)
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-console.log(generateBtn)
-document.numbericArray
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -30,11 +39,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 /*
-// Assignment code here
+//----------Assignment code here---------------
 
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate"); "method returns the first element that matches a CSS selector."-w3schools.com
 
 // Write password to the #password input
 function writePassword() {
@@ -47,4 +56,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+addEventListener - w3schools.com
+The addEventListener() method attaches an event handler to a document.
+Syntax document.addEventListener(event, function, Capture)
 */
