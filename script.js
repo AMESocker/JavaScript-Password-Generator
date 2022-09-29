@@ -28,8 +28,11 @@ console.log(special)
 
 
 function generatePassword() {
-  var passwordLength = prompt('How long of a password do you want?',);
-  console.log(passwordLength)
+  var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);
+    if  (passwordLength < 8 || passwordLength > 128) {
+      alert('Please choose a number between 8 and 128.')
+    } else {console.log(passwordLength)
+    }
 }
 
 /*
