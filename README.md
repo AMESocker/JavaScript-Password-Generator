@@ -44,7 +44,7 @@ GIVEN I need a new, secure password
 
 **TODO**
 6.  WHEN all prompts are answered
-    HEN a password is generated that matches the selected criteria
+    THEN a password is generated that matches the selected criteria
 
 **TODO**
 7.  WHEN the password is generated
