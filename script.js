@@ -2,7 +2,8 @@
 
 //----Done----use a button in html to start javascript code
 
-//prompt will ask user to choose length of password from 8 to 128 --Syntax prompt(text, defaultText)
+//----Done----prompt will ask user to choose length of password from 8 to 128 --Syntax prompt(text, defaultText)
+//Also, if outside paramiter alert message
 /*confirm will ask user -- confirm('message')
   wants lower case letters
   wants upper case letters
@@ -19,22 +20,26 @@ var upperCase = ['Q','W','E','R','T','Y','U','I','O','P','A','S','D','F','G','H'
 var lowerCase = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m']
 var numberic = [0,1,2,3,4,5,6,7,8,9];
 var special = [' ','!','\"','#','$','%','&','(',')','*','+','-','.','/',':',';','<','=','>','?','@','[',']','^','_','`','{','|','}','~']
-//Test
+/*Test
 console.log(upperCase)
 console.log(lowerCase)
 console.log(numberic)
 console.log(special)
+*/
 
 
 
 function generatePassword() {
-  var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);
-    if  (passwordLength < 8 || passwordLength > 128) {
-      alert('Please choose a number between 8 and 128.')
-    } else {console.log(passwordLength)
+  var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);  //enter Number
+    if  (passwordLength < 8 || passwordLength > 128) {                              //number outside range
+      alert('Please choose a number between 8 and 128.')  
+    } else { 
+      confirm('Do you want upper case letters?')
+        console.log(passwordLength)
     }
 }
 
+//var passwordLength = document.querySelector('#password') -- doesn't show text on html
 /*
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

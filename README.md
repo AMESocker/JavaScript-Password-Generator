@@ -30,7 +30,7 @@ GIVEN I need a new, secure password
 2.  WHEN prompted for password criteria
     THEN I select which criteria to include in the password
 
-**TODO**
+**Completed**
 3.  WHEN prompted for the length of the password
     THEN I choose a length of at least 8 characters and no more than 128 characters
 
