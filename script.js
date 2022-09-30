@@ -55,8 +55,8 @@ function generatePrompts() {                                                    
 //----Selection of letters---- 
 //----Lower Case Letters----
 function generateLowerCaseLetterCharacters() {                                      //called by else from generatePassword
-  if (confirm('Do you want lower case letters?')){                           //
-    lowerCaseChar;generateUpperCaseLetterCharacters()
+  if (confirm('Do you want lower case letters?')){                           //if yes, then include on concat array
+    console.log(lowerCaseChar);lowerCaseChar;generateUpperCaseLetterCharacters();console.log(lowerCaseChar);
   } else {   (generateUpperCaseLetterCharacters())
   }
 } 
@@ -84,12 +84,26 @@ function generateSpecialCharacters(){
   if (confirm('Do you want special character?')==true){
     console.log(specialChar);
   } else {
-    
+    // atLeastOne()
   }
 }
 
+// function atLeastOne(){
+//   if (!generateLowerCaseLetterCharacters() && !generateUpperCaseLetterCharacters() && !generateNumbers() && !generateSpecialCharacters()){
+//     alert("Please chose at least one set of characters.")
+//   } else {
+
+//   }
+// }
+//Need to get true values to populate in charcter array
 //----Character Array List----
-var characterArrayList = lowerCaseChar.concat(upperCaseChar, numericChar,specialChar);console.log(characterArrayList)
+// var characterArrayList = lowerCaseChar.concat(upperCaseChar, numericChar,specialChar);console.log(characterArrayList)
+//From this array choose a series of random characters
+//----Random number code----
+// var X = [0,1,2,3,4,5,6,7,8,9,10]
+// var random = characterArrayList[Math.floor(Math.random()*characterArrayList.length)];console.log(random)
+// for (var i = 0; i <= characterArrayList.length; i++){console.log(random[i]);}
+
 // function CharacterArray(){
 //   var yesLowerCase = console.log(yesLowerCase);
 //   var yesUpperCase = generateNumbers();console.log(yesUpperCase);
@@ -98,8 +112,7 @@ var characterArrayList = lowerCaseChar.concat(upperCaseChar, numericChar,special
 // }
 
 // numbers = num1.concat(num2, num3);
-//----Random number code----
-// var randomCharacter = myArray[Math.floor(Math.random()*myArray.length)];
+
 
 //----Starter Code----
 // Get references to the #generate element
