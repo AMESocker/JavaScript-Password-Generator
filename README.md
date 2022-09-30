@@ -22,33 +22,32 @@ SO THAT I can create a strong password that provides greater security
 
 GIVEN I need a new, secure password
 
-**Completed**
-1.  WHEN I click the button to generate a password
-    THEN I am presented with a series of prompts for password criteria
 
-**Completed**
-2.  WHEN prompted for password criteria
-    THEN I select which criteria to include in the password
+  WHEN I click the button to generate a password
+  THEN I am presented with a series of prompts for password criteria
 
-**Completed**
-3.  WHEN prompted for the length of the password
-    THEN I choose a length of at least 8 characters and no more than 128 characters
+  WHEN prompted for password criteria
+  THEN I select which criteria to include in the password
 
-**Completed**
-4.  WHEN asked for character types to include in the password
-    THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
 
-**TODO**
-5.  WHEN I answer each prompt
-    THEN my input should be validated and at least one character type should be selected
+  WHEN prompted for the length of the password
+  THEN I choose a length of at least 8 characters and no more than 128 characters
 
-**TODO**
-6.  WHEN all prompts are answered
-    THEN a password is generated that matches the selected criteria
 
-**TODO**
-7.  WHEN the password is generated
-    THEN the password is either displayed in an alert or written to the page
+  WHEN asked for character types to include in the password
+  THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+
+
+  WHEN I answer each prompt
+  THEN my input should be validated and at least one character type should be selected
+
+
+  WHEN all prompts are answered
+  THEN a password is generated that matches the selected criteria
+
+
+  WHEN the password is generated
+  THEN the password is either displayed in an alert or written to the page
 
 ### Extra Info
 
@@ -59,3 +58,4 @@ Password Special Characters - " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
     Getting sytax of prompt
     writing the series of promts
     syntax of split method
+    I believe there is a simpler exicution of this excersize
