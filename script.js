@@ -15,45 +15,80 @@
 //after all options are selected the output will be printed on page or in alert
 
 //-----------------Code---------------------------------------
-//Characters to be used
-var lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
-var lowerCaseChar = lowerCase.split("");
-console.log(lowerCaseChar)
-var upperCase = ['QWERTYUIOPASDFGHJKLZXCVBNM'];
+//----Characters to be used------------------------
 
-var numberic = [0,1,2,3,4,5,6,7,8,9];
-var special = [' ','!','\"','#','$','%','&','(',')','*','+','-','.','/',':',';','<','=','>','?','@','[',']','^','_','`','{','|','}','~'];
+var lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
+var lowerCaseChar = lowerCase.split(""); 
+
+var upperCase = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+var upperCaseChar = upperCase.split('');
+
+var numeric = '0123456789';
+var numericChar = numeric.split('');
+
+var special = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+var specialChar = special.split('');
+
+//----End Characters--------------------------------
+// console.log(specialChar)
+// wrong - var special = [' ','!','\"','#','$','%','&','(',')','*','+','-','.','/',':',';','<','=','>','?','@','[',']','^','_','`','{','|','}','~'];
 // console.log(lowerCase)
-/*Test
-console.log(upperCase)
-console.log(lowerCase)
-console.log(numberic)
-console.log(special)
-*/
+// /*Test
+// console.log(upperCase)
+// console.log(lowerCase)
+// console.log(numberic)
+// console.log(special)
+// */
 // lowerCase.split("");
 
-
+//----Prompts------------------------------------------------------------------------
+//----Password Length----
 function generatePassword() {
   var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);  //enter Number
     if  (passwordLength < 8 || passwordLength > 128) {                              //number outside range
-      alert('Please choose a number between 8 and 128.')  
-    } else {    console.log(passwordLength);                                                                                //number inside range
-      confirm('Do you want lower case letters?')
-        if (true) {
-          console.log(lowerCase);
-        } else (false) 
-          confirm('Do you want upper case letters?')
-          confirm('Do you want numbers?')
-          confirm('Do you want special characters?')
-           console.log()
-        }
+      alert('Please choose a number between 8 and 128.'); 
+    } else { generateLowerCaseLetterCharacters();   
+      console.log(passwordLength);  
+    }
   }
-  
-  
 
-var passwordLength = document.querySelector('#password') 
+//----Lower Case Letters----
+function generateLowerCaseLetterCharacters() {
+  if (confirm('Do you want lower case letters?')==true) {
+    console.log(lowerCaseChar)
+  } else {
+    generateUpperCaseLetterCharacters()
+  }
+}
+
+//----Upper Case Letter----
+function generateUpperCaseLetterCharacters(){
+  if (confirm('Do you want upper case letters?')==true){
+    console.log(upperCaseChar)
+  } writePassword()
+}
+ 
+//----Number----
+
+//----Special Characters----
+
+
+      //number inside range
+      // confirm('Do you want lower case letters?');
+  //   if (console.log(lowerCaseChar));{
+  //     confirm('Do you want upper case letters?');
+  //   } else 
+  //         {
+  //         confirm('Do you want upper case letters?');
+  //         confirm('Do you want numbers?')
+  //         confirm('Do you want special characters?')
+  //          console.log()
+  //       }
+  //     }
+  // }
+// var passwordLength = document.querySelector('#password') 
 // -- doesn't show text on html
-/*
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -68,7 +103,7 @@ function writePassword() {
 }
 
 // // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);*/
+generateBtn.addEventListener("click", writePassword)
 // 
 // ----------Assignment code here---------------
 
