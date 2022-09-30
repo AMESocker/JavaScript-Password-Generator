@@ -43,69 +43,81 @@ var specialChar = special.split('');
 
 //----Prompts------------------------------------------------------------------------
 //----Password Length----
-function generatePassword() {
+function generatePrompts() {                                                       //HTML Event
   var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);  //enter Number
-    if  (passwordLength < 8 || passwordLength > 128) {                              //number outside range
-      alert('Please choose a number between 8 and 128.'); 
+    if  (passwordLength < 8 || passwordLength > 128) {                              //Enter number
+      alert('Please choose a number between 8 and 128.');                           //when condition is not meet
     } else { generateLowerCaseLetterCharacters();   
-      console.log(passwordLength);  
+      passwordLength;console.log(passwordLength);  
     }
   }
 
+//----Selection of letters---- 
 //----Lower Case Letters----
-function generateLowerCaseLetterCharacters() {
-  if (confirm('Do you want lower case letters?')==true) {
-    console.log(lowerCaseChar)
-  } else {
-    generateUpperCaseLetterCharacters()
+function generateLowerCaseLetterCharacters() {                                      //called by else from generatePassword
+  if (confirm('Do you want lower case letters?')){                           //
+    lowerCaseChar;generateUpperCaseLetterCharacters()
+  } else {   (generateUpperCaseLetterCharacters())
   }
-}
+} 
 
 //----Upper Case Letter----
-function generateUpperCaseLetterCharacters(){
+function generateUpperCaseLetterCharacters() {
   if (confirm('Do you want upper case letters?')==true){
-    console.log(upperCaseChar)
-  } writePassword()
+    console.log(upperCaseChar);generateNumbers()
+  } else {(generateNumbers())
+
+  }
 }
  
 //----Number----
+function generateNumbers(){
+  if (confirm('Do you want numbers?')==true){
+    console.log(numericChar);generateSpecialCharacters()
+  } else {(generateSpecialCharacters())
 
-//----Special Characters----
-
-
-      //number inside range
-      // confirm('Do you want lower case letters?');
-  //   if (console.log(lowerCaseChar));{
-  //     confirm('Do you want upper case letters?');
-  //   } else 
-  //         {
-  //         confirm('Do you want upper case letters?');
-  //         confirm('Do you want numbers?')
-  //         confirm('Do you want special characters?')
-  //          console.log()
-  //       }
-  //     }
-  // }
-// var passwordLength = document.querySelector('#password') 
-// -- doesn't show text on html
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  }
 }
 
+//----Special Characters----
+function generateSpecialCharacters(){
+  if (confirm('Do you want special character?')==true){
+    console.log(specialChar);
+  } else {
+    
+  }
+}
+
+//----Character Array List----
+var characterArrayList = lowerCaseChar.concat(upperCaseChar, numericChar,specialChar);console.log(characterArrayList)
+// function CharacterArray(){
+//   var yesLowerCase = console.log(yesLowerCase);
+//   var yesUpperCase = generateNumbers();console.log(yesUpperCase);
+//   var yesNumbers
+//   var yesSpecial
+// }
+
+// numbers = num1.concat(num2, num3);
+//----Random number code----
+// var randomCharacter = myArray[Math.floor(Math.random()*myArray.length)];
+
+//----Starter Code----
+// Get references to the #generate element
+// var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+
+// }
+
 // // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword)
-// 
-// ----------Assignment code here---------------
+// generateBtn.addEventListener("click", writePassword)
+
+//----Older Notes----
 
 
 // // Get references to the #generate element
@@ -128,3 +140,18 @@ generateBtn.addEventListener("click", writePassword)
 // addEventListener - w3schools.com
 // The addEventListener() method attaches an event handler to a document.
 // Syntax document.addEventListener(event, function, Capture)
+//number inside range
+// confirm('Do you want lower case letters?');
+//   if (console.log(lowerCaseChar));{
+//     confirm('Do you want upper case letters?');
+//   } else 
+//         {
+//         confirm('Do you want upper case letters?');
+//         confirm('Do you want numbers?')
+//         confirm('Do you want special characters?')
+//          console.log()
+//       }
+//     }
+// }
+// var passwordLength = document.querySelector('#password') 
+// -- doesn't show text on html

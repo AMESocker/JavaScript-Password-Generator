@@ -53,3 +53,9 @@ GIVEN I need a new, secure password
 ### Extra Info
 
 Password Special Characters - " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+
+### Challenges 
+
+    Getting sytax of prompt
+    writing the series of promts
+    syntax of split method
