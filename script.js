@@ -15,6 +15,7 @@
 //after all options are selected the output will be printed on page or in alert
 
 //-----------------Code---------------------------------------
+
 //----Characters to be used------------------------
 
 var lowerCase = 'qwertyuiopasdfghjklzxcvbnm';
@@ -40,54 +41,79 @@ var specialChar = special.split('');
 // console.log(special)
 // */
 // lowerCase.split("");
+//----Prompts if one function----
+// document.getElementById('generate').addEventListener("click",Prompts());
 
+function Prompts(){
+  var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);  //enter Number
+  if  (passwordLength < 8 || passwordLength > 128) {                              //Enter number
+    alert('Please choose a number between 8 and 128.');  
+  }else if (confirm('Do you want lower case letters?')){ 
+    console.log(lowerCaseChar)
+  } console.log("none")
+}
 //----Prompts------------------------------------------------------------------------
 //----Password Length----
+
 function generatePrompts() {                                                       //HTML Event
   var passwordLength = prompt('How long of a password do you want? (8 to 128)',8);  //enter Number
     if  (passwordLength < 8 || passwordLength > 128) {                              //Enter number
       alert('Please choose a number between 8 and 128.');                           //when condition is not meet
-    } else { generateLowerCaseLetterCharacters();   
-      passwordLength;console.log(passwordLength);  
+    } else {  generateLowerCaseLetterCharacters();   
+              passwordLength;
+              console.log(passwordLength);  
+              // document.getElementById('password').innerHTML = lowerCaseChar
     }
   }
 
 //----Selection of letters---- 
+var startArray = [];
 //----Lower Case Letters----
+var lowerUsed;
 function generateLowerCaseLetterCharacters() {                                      //called by else from generatePassword
   if (confirm('Do you want lower case letters?')){                           //if yes, then include on concat array
-    console.log(lowerCaseChar);lowerCaseChar;generateUpperCaseLetterCharacters();console.log(lowerCaseChar);
-  } else {   (generateUpperCaseLetterCharacters())
+    lowerUsed = startArray.concat(lowerCaseChar);
+  } else {
+    lowerUsed = startArray;
   }
+  console.log(lowerUsed);
+  generateUpperCaseLetterCharacters();
 } 
-
+// console.log(generateLowerCaseLetterCharacters).value
 //----Upper Case Letter----
+var upperUsed;
 function generateUpperCaseLetterCharacters() {
-  if (confirm('Do you want upper case letters?')==true){
-    console.log(upperCaseChar);generateNumbers()
-  } else {(generateNumbers())
-
+  if (confirm('Do you want upper case letters?')){
+    upperUsed = lowerUsed.concat(upperCaseChar);
+  } else {
+    upperUsed = lowerUsed;
   }
+  console.log(upperUsed);
+  // generateNumbers();
 }
  
-//----Number----
-function generateNumbers(){
-  if (confirm('Do you want numbers?')==true){
-    console.log(numericChar);generateSpecialCharacters()
-  } else {(generateSpecialCharacters())
+// //----Number----
+// function generateNumbers(){
+//   if (confirm('Do you want numbers?')){
+//     console.log(numericChar);
+//   } else {(generateSpecialCharacters())
 
-  }
-}
+//   }generateSpecialCharacters();
+// }
 
-//----Special Characters----
-function generateSpecialCharacters(){
-  if (confirm('Do you want special character?')==true){
-    console.log(specialChar);
-  } else {
-    // atLeastOne()
-  }
-}
+// //----Special Characters----
+// function generateSpecialCharacters(){
+//   if (confirm('Do you want special character?')==true){
+//     console.log(specialChar);
+//   } else {
+//   }
+//   // console.log(charUsed);
+//   console.log("I am The Gatekeeper!");
 
+// }
+
+// var passwordChar = generateLowerCaseLetterCharacters.value + generateUpperCaseLetterCharacters.value + generateNumbers.value + generateSpecialCharacters.value;
+// document.getElementByID('password').innerHTML='A';
 // function atLeastOne(){
 //   if (!generateLowerCaseLetterCharacters() && !generateUpperCaseLetterCharacters() && !generateNumbers() && !generateSpecialCharacters()){
 //     alert("Please chose at least one set of characters.")
