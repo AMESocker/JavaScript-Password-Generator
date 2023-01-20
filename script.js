@@ -97,12 +97,15 @@ function generateSpecial() {
   } else {
     charUsed
   }
-  if(charUsed.length !== 0){
+  if (charUsed.length !== 0) {
     generatePassword();
 
     console.log(charUsed);
     console.log(charUsed.length);
-  } return;
+  } else {
+    alert(`Please select one set.`);
+    return;
+  }
 }
 
 function generatePassword() {
@@ -123,6 +126,7 @@ function generatePassword() {
   console.log(displayPassword);
   document.getElementById('password').innerHTML = displayPassword.join('');
   console.log(displayPassword.join(''))
+  // alert(displayPassword.join(''))
 }
 // 0000 (8) [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 // 0001 <[^^!+&~
