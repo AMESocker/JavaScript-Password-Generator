@@ -97,12 +97,12 @@ function generateSpecial() {
   } else {
     charUsed
   }
-  console.log(charUsed);
+  if(charUsed.length !== 0){
+    generatePassword();
 
-  // charUsed = charUsed[0].concat(charUsed[1]).concat(charUsed[2]).concat(charUsed[3])
-
-  // console.log(charUsed);
-  generatePassword();
+    console.log(charUsed);
+    console.log(charUsed.length);
+  } return;
 }
 
 function generatePassword() {
@@ -124,19 +124,19 @@ function generatePassword() {
   document.getElementById('password').innerHTML = displayPassword.join('');
   console.log(displayPassword.join(''))
 }
-// 0000 script.js:92 Uncaught TypeError: Cannot read properties of undefined (reading 'concat')
-// 0001 |{%)_,!
-// 0010 489787
-// 0011 '4: {2%
-// 0100
-// 0101
-// 0110
-// 0111
-// 1000
-// 1001
-// 1010
-// 1011
-// 1100
-// 1101
-// 1110
-// 1111 e#iKw,Y 
+// 0000 (8) [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+// 0001 <[^^!+&~
+// 0010 62117511
+// 0011 / 35.06?
+// 0100 TGKQXQXT
+// 0101 J<YV!)H%
+// 0110 3HXEIYIN
+// 0111 |-.61;~R
+// 1000 tjnljsmf
+// 1001 >|mk_e&.
+// 1010 eny62mga
+// 1011 f62k,r'.
+// 1100 rwJbPEWO
+// 1101 %DW]&TQl
+// 1110 EEKnPXDg
+// 1111 Us7T']|% 
