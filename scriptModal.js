@@ -74,9 +74,9 @@ var specialChar = special.split('');
 var charUsed = [];
 console.log(charUsed)
 function generatePrompts() {
-  passwordLength = prompt('How long of a password do you want? (8 to 128)', 8);
+  passwordLength = document.getElementById("pl").value;
   charUsed = [];
-  document.getElementById('password').innerHTML = charUsed
+  document.getElementById('pl').innerHTML = charUsed
   if (passwordLength < 8 || passwordLength > 128) {
     confirm('Please choose a number between 8 and 128.',);
   } else {
@@ -87,7 +87,8 @@ function generatePrompts() {
 //----Selection of letters---- 
 //--------Lower Case Letters----
 function generateLowerCaseLetterCharacters() {
-  if (confirm('Do you want lower case letters?')) {
+  var lclCheckBox = document.getElementById("lcl");
+  if (lclCheckBox.checked == true) {
     for (let i = 0; i < lowerCaseChar.length; i++) {
       charUsed.push(lowerCaseChar[i]);
     }
@@ -100,7 +101,8 @@ function generateLowerCaseLetterCharacters() {
 //----Upper Case Letter----
 
 function generateUpperCaseLetterCharacters() {
-  if (confirm('Do you want upper case letters?')) {
+  var uclCheckBox = document.getElementById("ucl");
+  if (uclCheckBox.checked == true) {
     for (let i = 0; i < upperCaseChar.length; i++) {
       charUsed.push(upperCaseChar[i]);
     }
@@ -114,7 +116,8 @@ function generateUpperCaseLetterCharacters() {
 }
 
 function generateNumbers() {
-  if (confirm('Do you want numbers?')) {
+  var nbCheckBox = document.getElementById("nb");
+  if (nbCheckBox.checked == true)  {
     for (let i = 0; i < numericChar.length; i++) {
       charUsed.push(numericChar[i]);
     }
@@ -128,7 +131,8 @@ function generateNumbers() {
 }
 
 function generateSpecial() {
-  if (confirm('Do you want special characters?')) {
+  var scCheckBox = document.getElementById("sc");
+  if (scCheckBox.checked == true)  {
     for (let i = 0; i < specialChar.length; i++) {
       charUsed.push(specialChar[i]);
     }
@@ -160,6 +164,7 @@ function generatePassword() {
 
 
   }
+  modal.style.display = "none";
   console.log(passwordIndex)
   console.log(displayPassword);
   document.getElementById('password').innerHTML = displayPassword.join('');
