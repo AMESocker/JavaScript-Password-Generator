@@ -1,5 +1,9 @@
 # JavaScript Password Generator
 
+## Deployed Site
+
+https://amesocker.github.io/JavaScript-Password-Generator/
+
 ## Description
 
 Create a strong password that provides greater security by randomly generating a password that meets a certain criteria.
