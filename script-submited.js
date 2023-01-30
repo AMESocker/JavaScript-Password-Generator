@@ -62,7 +62,7 @@ function generatePrompts() {                                                    
     } else {  generateLowerCaseLetterCharacters();   
               passwordLength;
               console.log(passwordLength);  
-              document.getElementById('password').innerHTML = lowerCaseChar
+              document.getElementById('myBtn').innerHTML = lowerCaseChar
     }
   }
 
